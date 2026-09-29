@@ -1,10 +1,10 @@
-"""Check complete language navigation, documentation structure and local links."""
+"""Check language navigation, LSPosed-safe README URLs and documentation links."""
 from pathlib import Path
 import re
-import os
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
+DOCS_BASE = 'https://github.com/Xposed-Modules-Repo/io.github.asadman1523.privatespaceshortcuts/blob/main/'
 LANGUAGES = {
     'en': 'English', 'zh-CN': '简体中文', 'zh-TW': '繁體中文',
     'ko-KR': '한국어', 'ja-JP': '日本語', 'pl-PL': 'Polski',
@@ -29,8 +29,7 @@ for code, name in LANGUAGES.items():
     assert len(content) > 1500, f'Incomplete translation: {path.name}'
     nav = next(line for line in content.splitlines() if line.startswith('Read this in other languages:'))
     for other, label in LANGUAGES.items():
-        relative = Path(os.path.relpath(ROOT / filename(other), path.parent)).as_posix()
-        expected = f'**{label}**' if other == code else f'[{label}]({relative})'
+        expected = f'**{label}**' if other == code else f'[{label}]({DOCS_BASE}{filename(other)})'
         assert expected in nav, f'{path.name}: missing language {other}'
     sections = ['features', 'compatibility', 'installation', 'usage', 'build', 'disable', 'license']
     assert all(section in anchors(content) for section in sections), path.name
@@ -43,11 +42,18 @@ for path in list(ROOT.glob('README*.md')) + list((ROOT / 'docs').rglob('*.md')):
     content = path.read_text(encoding='utf-8')
     for href in re.findall(r'\]\(([^\s)]+)\)', content):
         parsed = urlsplit(href)
-        if parsed.scheme:
+        if path.name.startswith('README'):
+            assert parsed.scheme, f'{path.name}: README link must be absolute for LSPosed: {href}'
+        if href.startswith(DOCS_BASE):
+            # GitHub URLs must still resolve to files and anchors in this checkout.
+            parsed = urlsplit(href[len(DOCS_BASE):])
+            target = (ROOT / unquote(parsed.path)).resolve()
+        elif parsed.scheme:
             continue
-        target = (path.parent / unquote(parsed.path)).resolve() if parsed.path else path
+        else:
+            target = (path.parent / unquote(parsed.path)).resolve() if parsed.path else path
         assert target.is_relative_to(ROOT), f'{path.name}: link outside repository: {href}'
         assert target.exists(), f'{path.name}: broken link: {href}'
         if parsed.fragment and target.suffix == '.md':
             assert unquote(parsed.fragment) in anchors(target.read_text(encoding='utf-8')), f'{path.name}: missing anchor: {href}'
-print('Checked 19 complete READMEs, language navigation, badges and all local documentation links.')
+print('Checked 19 complete READMEs, absolute language navigation, badges and all repository documentation links.')
