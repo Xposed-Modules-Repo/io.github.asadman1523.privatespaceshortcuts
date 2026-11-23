@@ -1,5 +1,7 @@
 # Pixel Private Space Shortcuts
 
+> [Neues PPS-Paket und Anleitung zum Umstieg](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
+
 Native Startbildschirm-Verknüpfungen für Apps im privaten Bereich von Pixel, mit LSPosed.
 
 [![Build](https://img.shields.io/github/actions/workflow/status/asadman1523/pixel-private-space-shortcuts/build.yml?branch=main&style=flat&logo=githubactions&logoColor=white)](https://github.com/asadman1523/pixel-private-space-shortcuts/actions/workflows/build.yml)

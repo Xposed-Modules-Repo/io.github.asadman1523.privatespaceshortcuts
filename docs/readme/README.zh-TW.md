@@ -1,5 +1,7 @@
 # Pixel Private Space Shortcuts
 
+> [PPS 新套件與遷移說明](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
+
 透過 LSPosed，將 Pixel 私人空間 App 加入原生主畫面。
 
 [![Build](https://img.shields.io/github/actions/workflow/status/asadman1523/pixel-private-space-shortcuts/build.yml?branch=main&style=flat&logo=githubactions&logoColor=white)](https://github.com/asadman1523/pixel-private-space-shortcuts/actions/workflows/build.yml)
