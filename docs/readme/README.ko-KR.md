@@ -1,6 +1,6 @@
-# Pixel Private Space Shortcuts
+# [새 PPS 패키지 및 이전 방법](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
 
-> [새 PPS 패키지 및 이전 방법](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
+## Pixel Private Space Shortcuts
 
 LSPosed로 Pixel 비공개 공간 앱의 기본 홈 화면 바로가기를 만듭니다.
 

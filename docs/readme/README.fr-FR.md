@@ -1,6 +1,6 @@
-# Pixel Private Space Shortcuts
+# [Nouveau paquet PPS et instructions de migration](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
 
-> [Nouveau paquet PPS et instructions de migration](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
+## Pixel Private Space Shortcuts
 
 Des raccourcis natifs sur l’écran d’accueil pour les applications de l’Espace privé Pixel, avec LSPosed.
 

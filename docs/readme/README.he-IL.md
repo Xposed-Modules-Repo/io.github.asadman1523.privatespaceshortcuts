@@ -1,6 +1,6 @@
-# Pixel Private Space Shortcuts
+# [חבילת PPS החדשה והוראות מעבר](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
 
-> [חבילת PPS החדשה והוראות מעבר](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
+## Pixel Private Space Shortcuts
 
 קיצורי דרך מקוריים במסך הבית לאפליקציות המרחב הפרטי ב־Pixel, באמצעות LSPosed.
 

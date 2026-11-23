@@ -1,6 +1,6 @@
-# Pixel Private Space Shortcuts
+# [Paket PPS baru dan petunjuk migrasi](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
 
-> [Paket PPS baru dan petunjuk migrasi](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
+## Pixel Private Space Shortcuts
 
 Pintasan layar utama asli untuk aplikasi Ruang Pribadi Pixel melalui LSPosed.
 

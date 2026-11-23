@@ -1,6 +1,6 @@
-# Pixel Private Space Shortcuts
+# [Yeni PPS paketi ve geçiş talimatları](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
 
-> [Yeni PPS paketi ve geçiş talimatları](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
+## Pixel Private Space Shortcuts
 
 LSPosed ile Pixel Özel Alan uygulamaları için yerel ana ekran kısayolları.
 

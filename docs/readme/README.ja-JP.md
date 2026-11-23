@@ -1,6 +1,6 @@
-# Pixel Private Space Shortcuts
+# [PPS の新しいパッケージと移行手順](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
 
-> [PPS の新しいパッケージと移行手順](https://github.com/Xposed-Modules-Repo/io.github.asadman1523.pps#installing-or-migrating)
+## Pixel Private Space Shortcuts
 
 LSPosed を使用し、Pixel のプライベートスペースのアプリを標準ホーム画面に追加します。
 
